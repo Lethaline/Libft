@@ -6,7 +6,7 @@
 /*   By: lolemmen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 16:15:53 by lolemmen          #+#    #+#             */
-/*   Updated: 2022/04/08 14:59:52 by lolemmen         ###   ########.fr       */
+/*   Updated: 2022/04/08 18:56:02 by lolemmen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	result = (void *)malloc(size * count * sizeof(void));
 	if (!result)
+		return (NULL);
+	if (size == 0)
 		return (NULL);
 	i = count * size;
 	if (i / size != count)
