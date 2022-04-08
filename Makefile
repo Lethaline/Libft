@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lolemmen <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: lolemmen <lolemmen@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 20:48:30 by lolemmen          #+#    #+#              #
-#    Updated: 2022/04/05 16:16:05 by lolemmen         ###   ########.fr        #
+#    Updated: 2022/04/08 00:13:18 by lolemmen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,50 @@ SRC = \
 	 Chars/ft_isascii.c \
 	 Chars/ft_isdigit.c \
 	 Chars/ft_isprint.c \
+	 Chars/ft_toupper.c \
+	 Chars/ft_tolower.c \
+	 Chars/ft_putchar_fd.c \
 	 Memories/ft_bzero.c \
 	 Memories/ft_memcpy.c \
 	 Memories/ft_memmove.c \
 	 Memories/ft_memset.c \
+	 Memories/ft_calloc.c \
+	 Memories/ft_memccpy.c \
+	 Memories/ft_memchr.c \
+	 Memories/ft_memcmp.c \
+	 Strings/ft_strlen.c \
+	 Strings/ft_putendl_fd.c \
+	 Strings/ft_putstr_fd.c \
+	 Strings/ft_strchr.c \
+	 Strings/ft_strrchr.c \
+	 Strings/ft_strncmp.c \
+	 Strings/ft_strnstr.c \
+	 Strings/ft_strlcpy.c \
+	 Strings/ft_strlcat.c \
+	 Strings/ft_strdup.c \
+	 Strings/ft_substr.c \
+	 Strings/ft_strjoin.c \
+	 Strings/ft_strtrim.c \
+	 Strings/ft_strmapi.c \
+	 Strings/ft_split.c \
+	 Strings/ft_striteri.c \
+	 Numbers/ft_atoi.c \
+	 Numbers/ft_itoa.c \
+	 Numbers/ft_putnbr_fd.c \
+	 Lists/ft_lstsize.c \
+	 Lists/ft_lstnew.c \
+	 Lists/ft_lstdelone.c \
+	 Lists/ft_lstclear.c \
+	 Lists/ft_lstadd_back.c \
+	 Lists/ft_lstadd_front.c \
+	 Lists/ft_lstiter.c \
+	 Lists/ft_lstlast.c \
+	 Lists/ft_lstmap.c \
 
 SRCBON = \
+	 Lists/ft_lstsize.c \
+	 Lists/ft_lstnew.c \
+	 Lists/ft_lstclear.c \
 
 
 # **************************************************************************** #

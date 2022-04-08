@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolemmen <lolemmen@student.s19.be>         +#+  +:+       +#+        */
+/*   By: lolemmen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 15:01:29 by lolemmen          #+#    #+#             */
-/*   Updated: 2022/04/05 19:16:00 by lolemmen         ###   ########.fr       */
+/*   Created: 2022/04/08 00:06:39 by lolemmen          #+#    #+#             */
+/*   Updated: 2022/04/08 00:08:17 by lolemmen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../Includes/libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t			i;
+	t_list	*last;
 
-	i = 0;
-	if (!dst || !src)
+	if (!lst)
 		return (NULL);
-	if (dst > src)
+	while (lst)
 	{
-		while (len > 0)
-		{
-			((char *)dst)[len - 1] = ((char *)src)[len - 1];
-			len--;
-		}
+		last = lst;
+		lst = lst->next;
 	}
-	else
-	{
-		while (i < len)
-		{
-			((char *)dst)[i] = ((char *)src)[i];
-			i++;
-		}
-	}
-	return (dst);
+	return (last);
 }
