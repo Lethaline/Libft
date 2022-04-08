@@ -6,20 +6,20 @@
 /*   By: lolemmen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:26:57 by lolemmen          #+#    #+#             */
-/*   Updated: 2022/04/08 09:59:37 by lolemmen         ###   ########.fr       */
+/*   Updated: 2022/04/08 11:24:10 by lolemmen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../Includes/libft.h"
 
-static int	ft_free(char **str, int size)
+static void	ft_free(char **str, int size)
 {
 	while (size >= 0)
 	{
 		free(str[size]);
 		size--;
 	}
-	return (-1);
+	return ;
 }
 
 static int	ft_check_if_null_word(char *str, char sep)
@@ -87,7 +87,10 @@ char	**ft_split(char const *s, char c)
 		n = ft_check_if_null_word((char *)s, c);
 		tab[i] = ft_strcpy((char *)s, n);
 		if (!tab[i])
-			return (ft_free(tab, size));
+		{
+			ft_free(tab, size);
+			return (NULL);
+		}
 		s += n;
 		i++;
 	}
