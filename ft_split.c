@@ -19,6 +19,7 @@ static char	**ft_free(char **str, int size)
 		free(str[size]);
 		size--;
 	}
+	free(str);
 	return (NULL);
 }
 
